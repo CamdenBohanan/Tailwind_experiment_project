@@ -1,0 +1,19 @@
+<div id="calendar-header"
+                class="flex justify-between items-center p-3 bg-gray-100 border-b border-gray-200 rounded-t-lg">
+                <button id="prev-month"
+                    class="px-3 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Prev</button>
+                <span id="current-month-year" class="text-lg font-semibold"></span>
+                <button id="next-month"
+                    class="px-3 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Next</button>
+            </div>
+
+            <div id="calendar-weekdays" class="grid grid-cols-7 text-center text-sm font-bold text-gray-600">
+                <span class="p-2">Sun</span>
+                <span class="p-2">Mon</span>
+                <span class="p-2">Tue</span>
+                <span class="p-2">Wed</span>
+                <span class="p-2">Thu</span>
+                <span class="p-2">Fri</span>
+                <span class="p-2">Sat</span>
+            </div>
+            <div id="calendar-days-grid" class="grid grid-cols-7 text-center">

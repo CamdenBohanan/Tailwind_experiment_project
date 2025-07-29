@@ -1,65 +1,134 @@
 <!DOCTYPE html>
-
+<html>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
     <script src="Script.js"></script>
-    <script> tailwind.config = {
+   
+    <script>
+       
+        tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-
                         georgia: ['Georgia', 'Script']
                     }
+                   
+                      <!-- light: 59493d, dark: 352923 -->       
                 }
-
             }
-        } </script>
+        }
+    </script>
 </head>
 
-<body>
-
-    <nav class="bg-amber-900 p-4 shadow-md rounded-lg mx-auto mt-4 max-w-7x1">
+<body class="bg-gray-400">
+    <nav class="bg-[#49372C] p-4 shadow-md rounded-lg mx-auto mt-4 max-w-7x1">
         <div class="container mx-auto flex justify-around items-center">
-
             <div class="flex items-center">
-
                 <h1 href="#"
-                    class="text-yellow-400 text-2xl hover:text-amber-100 transition duration-300 ease-in-out fontFamily">
+                    class="text-yellow-500 text-2xl hover:text-yellow-400 hover:-translate-y-1 hover:scale-110 transition duration-700 ease-in-out fontFamily">
                     Versailles
                 </h1>
             </div>
 
-            <a href="#"
-                class="text-white hover:text-yellow-400 font-medium transition duration-300 ease-in-out py-2 px-3 rounded-md text-4x1 text-bold cursor-pointer">Government</a>
-            <a href="#"
-                class="text-white hover:text-yellow-400 font-medium transition duration-300 ease-in-out py-2 px-3 rounded-md text-4x1 text-bold cursor-pointer">About</a>
-            <a href="#"
-                class="text-white hover:text-yellow-400 font-medium transition duration-300 ease-in-out py-2 px-3 rounded-md text-4x1 text-bold cursor-pointer">Forms</a>
-            <a href="#"
-                class="text-white hover:text-yellow-400 font-medium transition duration-300 ease-in-out py-2 px-3 rounded-md text-4x1 text-bold cursor-pointer">Contact
-                Us</a>
+                <el-dropdown class="fontFamily">
+                    <button class="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold text-white shadow-xs hover:text-yellow-500 transition hover:-translate-y-1 hover:scale-130 duration-700 ease-in-out">
+                        Goverment
+                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 size-5 text-yellow-500">
+                        <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                        </svg>
+                    </button>
+
+                    <el-menu anchor="bottom end" popover class="w-56 origin-top-right rounded-md shadow-lg ring-1 ring-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in bg-[#49372C]">
+                        <div class="py-1">
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Your Local Government</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Mayor's Office</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">City Council</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Code Enforcement</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Utility Departments</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Boards & Commissions</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">City Council Meeting Agenda & Minutes</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Committee Meeting Notices</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Police Department</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Fire Department</a>
+                        </div>
+                    </el-menu>
+                </el-dropdown>
+               <el-dropdown class="fontFamily">
+                    <button class="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold text-white shadow-xs hover:text-yellow-500 transition hover:-translate-y-1 hover:scale-130 duration-700 ease-in-out">
+                        About
+                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 size-5 text-yellow-500">
+                        <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                        </svg>
+                    </button>
+
+                    <el-menu anchor="bottom end" popover class="w-56 origin-top-right rounded-md shadow-lg ring-1 ring-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in bg-[#49372C]">
+                        <div class="py-1">
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">More About Woodford</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Community</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">FAQ</a>
+                        </div>
+                    </el-menu>
+                </el-dropdown>
+                <el-dropdown class="fontFamily">
+                    <button class="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold text-white shadow-xs hover:text-yellow-500 transition hover:-translate-y-1 hover:scale-130 duration-700 ease-in-out">
+                        Forms
+                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 size-5 text-yellow-500">
+                        <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                        </svg>
+                    </button>
+
+                    <el-menu anchor="bottom end" popover class="w-56 origin-top-right rounded-md shadow-lg ring-1 ring-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in bg-[#49372C]">
+                        <div class="py-1">
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Business Regristration Form</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Close Business Form</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Net Profit License Fee Return</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Refund of Withholding Tax Form</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Employers Quarterly Return Form</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Utility Services Sign Up</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Bank Draft Form</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Request for Convinction Records</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Contact Form</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Discontinunation for Service Notice</a>
+                        </div>
+                    </el-menu>
+                </el-dropdown>
+                <el-dropdown class="fontFamily">
+                <button class="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold text-white shadow-xs hover:text-yellow-500 transition hover:-translate-y-1 hover:scale-130 duration-700 ease-in-out">
+                    Contact Us
+                    <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 size-5 text-yellow-500">
+                    <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                    </svg>
+                </button>
+
+                <el-menu anchor="bottom end" popover class="w-56 origin-top-right rounded-md shadow-lg ring-1 ring-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in bg-[#49372C]">
+                    <div class="py-1">
+                    <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Email</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-white focus:text-yellow-500 focus:outline-hidden">Phone Number</a>
+                    
+                    </div>
+                </el-menu>
+                </el-dropdown>
         </div>
     </nav>
     <div class="bg-[url('test_picture.jpg')] bg-cover bg-center bg-no-repeat
     h-96 w-full max-w-14/15 mx-auto mt-3 rounded-lg shadow-xl
     flex items-center justify-center text-white text-4xl font-extrabold text-center ">
-
-
     </div>
-    <div class="bg-amber-900 p-4 container mx-auto px-4 py-8 mt-3">
+
+    <div class="bg-[#49372C] p-4 container mx-auto px-4 py-8 mt-3">
         <h2 class="text-yellow-400 fond-bold text-center">
             Recent News
         </h2>
         <div class="flex overflow-x-scroll snap-x snap-mandatory pb-4">
             <div class="flex-shrink-0 w-64 bg-white rounded-lg shadow-md overflow-hidden snap-center mr-4">
-
                 <div class="p-4">
-                    <h3 class="font-semibold text-yellow-400 mb-2">New Farmer's Market Open</h3>
+                    <h3 class="font-semibold text-yellow-500 mb-2">New Farmer's Market Open</h3>
                     <p class="text-gray-600 line-clamp-3 text-sm">Learn more about the new farmer's market that has
                         opened in downtown Versailles...</p>
-                    <a href="#" class="text-yellow-400 hover:underline cursor-pointer">Read More</a>
+                    <a href="#" class="text-yellow-500 hover:underline cursor-pointer">Read More</a>
                 </div>
             </div>
 
@@ -68,92 +137,91 @@
                     <h3 class="font-semibold text-yellow-400 mb-2">Historic Woodford Theatre Season Announced</h3>
                     <p class="text-gray-600 line-clamp-3 text-sm">Discover the exciting new lineup of plays and musicals
                         coming to the beloved Woodford Theatre this year...</p>
-                    <a href="#" class="text-yellow-400 hover:underline cursor-pointer">Read More</a>
+                    <a href="#" class="text-yellow-500 hover:underline cursor-pointer">Read More</a>
                 </div>
             </div>
 
             <div class="flex-shrink-0 w-64 bg-white rounded-lg shadow-md overflow-hidden snap-center mr-4">
                 <div class="p-4">
-                    <h3 class="font-semibold text-yellow-400 mb-2">Exploring Versailles' Horse Farm Legacy</h3>
+                    <h3 class="font-semibold text-yellow-500 mb-2">Exploring Versailles' Horse Farm Legacy</h3>
                     <p class="text-gray-600 line-clamp-3 text-sm">Dive into the rich history of thoroughbred breeding
                         and racing that defines Versailles' unique landscape...</p>
-                    <a href="#" class="text-yellow-400 hover:underline cursor-pointer">Read More</a>
+                    <a href="#" class="text-yellow-500 hover:underline cursor-pointer">Read More</a>
                 </div>
             </div>
 
             <div class="flex-shrink-0 w-64 bg-white rounded-lg shadow-md overflow-hidden snap-center mr-4">
                 <div class="p-4">
-                    <h3 class="font-semibold text-yellow-400 mb-2">Local Restaurants Join 'Taste of Versailles' Event
+                    <h3 class="font-semibold text-yellow-500 mb-2">Local Restaurants Join 'Taste of Versailles' Event
                     </h3>
                     <p class="text-gray-600 line-clamp-3 text-sm">Get ready to savor the flavors! Several local eateries
                         are participating in this year's culinary festival...</p>
-                    <a href="#" class="text-yellow-400 hover:underline cursor-pointer">Read More</a>
+                    <a href="#" class="text-yellow-500 hover:underline cursor-pointer">Read More</a>
                 </div>
             </div>
 
             <div class="flex-shrink-0 w-64 bg-white rounded-lg shadow-md overflow-hidden snap-center mr-4">
                 <div class="p-4">
-                    <h3 class="font-semibold text-yellow-400 mb-2">Community Garden Project Blooms in Versailles</h3>
+                    <h3 class="font-semibold text-yellow-500 mb-2">Community Garden Project Blooms in Versailles</h3>
                     <p class="text-gray-600 line-clamp-3 text-sm">See how residents are coming together to cultivate
                         fresh produce and foster community spirit in the new garden...</p>
-                    <a href="#" class="text-yellow-400 hover:underline cursor-pointer">Read More</a>
+                    <a href="#" class="text-yellow-500 hover:underline cursor-pointer">Read More</a>
                 </div>
             </div>
 
             <div class="flex-shrink-0 w-64 bg-white rounded-lg shadow-md overflow-hidden snap-center mr-4">
                 <div class="p-4">
-                    <h3 class="font-semibold text-yellow-400 mb-2">Versailles High School Celebrates Championship Win
+                    <h3 class="font-semibold text-yellow-500 mb-2">Versailles High School Celebrates Championship Win
                     </h3>
                     <p class="text-gray-600 line-clamp-3 text-sm">Relive the thrilling moments as the local high school
                         team brings home the state championship trophy...</p>
-                    <a href="#" class="text-yellow-400 hover:underline cursor-pointer">Read More</a>
+                    <a href="#" class="text-yellow-500 hover:underline cursor-pointer">Read More</a>
                 </div>
             </div>
 
             <div class="flex-shrink-0 w-64 bg-white rounded-lg shadow-md overflow-hidden snap-center mr-4">
                 <div class="p-4">
-                    <h3 class="font-semibold text-yellow-400 mb-2">Downtown Revitalization Project Underway</h3>
+                    <h3 class="font-semibold text-yellow-500 mb-2">Downtown Revitalization Project Underway</h3>
                     <p class="text-gray-600 line-clamp-3 text-sm">Updates on the ongoing efforts to enhance and beautify
                         the historic downtown district of Versailles...</p>
-                    <a href="#" class="text-yellow-400 hover:underline cursor-pointer">Read More</a>
+                    <a href="#" class="text-yellow-500 hover:underline cursor-pointer">Read More</a>
                 </div>
             </div>
         </div>
-        <div id="calendar-container"
-            class="font-inter w-full max-w-sm mx-auto border border-gray-300 rounded-lg overflow-hidden shadow-lg justify-center">
-            <h1 class="text-yellow-400 font-bold text-center">Upcoming Calendar </h1>
-            <div id="calendar-header"
-                class="flex justify-between items-center p-3 bg-gray-100 border-b border-gray-200 rounded-t-lg">
-                <button id="prev-month"
-                    class="px-3 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Prev</button>
-                <span id="current-month-year" class="text-lg font-semibold"></span>
-                <button id="next-month"
-                    class="px-3 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Next</button>
-            </div>
+        <section class="mb-8 p-5 border border-gray-200 rounded-lg bg-gray-50">
+            <h1 class="text-yellow-500 font-bold text-center">Upcoming Calendar </h1>
+            <div id="calendar">
 
-            <div id="calendar-weekdays" class="grid grid-cols-7 text-center text-sm font-bold text-gray-600">
-                <span class="p-2">Sun</span>
-                <span class="p-2">Mon</span>
-                <span class="p-2">Tue</span>
-                <span class="p-2">Wed</span>
-                <span class="p-2">Thu</span>
-                <span class="p-2">Fri</span>
-                <span class="p-2">Sat</span>
-            </div>
-            <div id="calendar-days-grid" class="grid grid-cols-7 text-center">
 
             </div>
+        </section>
+       <footer class="bg-[59493d] text-yellow-500 py-10 px-5">
+        <div class="container mx-auto flex flex-wrap justify-between items-start">
+
+            <div class="w-full md:w-1/4 lg:w-1/5 mb-8 md:mb-0">
+                <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="hover:text-yellow-400 transition-colors duration-300">Home</a></li>
+                    <li><a href="#about" class="hover:text-yellow-400 transition-colors duration-300">About Us</a></li>
+                    <li><a href="#services" class="hover:text-yellow-400 transition-colors duration-300">Services</a></li>
+                    <li><a href="#contact" class="hover:text-yellow-400 transition-colors duration-300">Contact</a></li>
+                    <li><a href="#privacy" class="hover:text-yellow-400 transition-colors duration-300">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="w-full md:w-1/2 lg:w-2/5 mb-8 md:mb-0">
+                <h3 class="text-lg font-semibold mb-4">About Our Town</h3>
+                <p class="text-yellow-600 leading-relaxed text-sm">Known for our picturesque countryside, rock lined fences and love for all things bourbon, wine &amp; bloodlines, Versailles and Uniquely Woodford County provide an unforgettable experience of life in the Bluegrass.</p>
+            </div>
+
+        
         </div>
-        <h2 class="text-yellow-400 font-bold">
-            Connect With Us
-        </h2>
-        <ul class="text-yellow-400 font-bold">
-            <li>Links</li>
-            <li>Etc</li>
-            <li>Blah</li>
-            <li>Blah</li>
-        </ul>
-        </footer>
+
+        <div class="container mx-auto mt-10 pt-5 text-center text-white text-xs">
+            &copy; 2025 @ Cambo Co. All rights reserved.
+        </div>
+    </footer>
+      
 </body>
 
 </html>
